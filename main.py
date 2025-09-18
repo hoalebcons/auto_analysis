@@ -10,8 +10,9 @@ import os
 app = Flask(__name__)
 
 # ==== CONFIG ====
-BQ_KEY_PATH = "Key/gg_big_query.json"
-GSHEET_KEY_PATH = "Key/google_sheet.json"
+BQ_KEY_PATH = os.environ.get("BQ_KEY_PATH", "Key/gg_big_query.json")
+GSHEET_KEY_PATH = os.environ.get("GSHEET_KEY_PATH", "Key/google_sheet.json")
+
 TARGET_SHEET_URL = "https://docs.google.com/spreadsheets/d/1pTH3minpoZMoT1xicadDF3WCSqKNugrUvplcpS9U__8/edit?gid=0"
 
 # ==== INIT BIGQUERY CLIENT ====
