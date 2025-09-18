@@ -1,0 +1,6 @@
+flask
+google-cloud-bigquery
+pandas
+gspread
+gspread-dataframe
+google-auth
